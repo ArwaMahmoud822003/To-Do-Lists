@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(150deg , #153677 , #4e085f);
+    padding: 10px;
+}
+.To-Do {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+.To-Do h2 {
+    color: #153677;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.To-Do h2 img {
+    width: 30px;
+    margin-left: 20px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeff0;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+input {
+    border: none;
+    outline: none;
+    background-color:#edeff0 ;
+    padding: 10px;
+    flex: 1;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #f68426;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+ul li {
+    list-style: none;
+    padding: 12px 8px 12px 40px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url('/project-four/image/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    bottom: 10px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url('/project-four/image/checked.png');
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 5px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 22px;
+}
+ul li span:hover {
+    background-color: #edeef0;
+}
+#askuser {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation-name: myName;
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+@keyframes myName {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
